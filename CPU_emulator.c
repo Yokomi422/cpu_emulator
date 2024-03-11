@@ -214,8 +214,8 @@ short ld(short regA, short regB) {
 	return (LD << 11) | (regA << 8) | (regB << 5);
 }
 
-short st(short regA, short regB) {
-	return (ST << 11) | (regA << 8) | (regB << 5);
+short st(short regA, short addr) {
+	return (ST << 11) | (regA << 8) | (addr & 0x00FF);
 }
 
 short hlt(void) {
