@@ -224,22 +224,22 @@ short hlt(void) {
 
 // define the function to get the instruction code
 short op_code(short ir) {
-	return (ir >> 11) & 0b11111;
+	return (ir >> 11) & 0x00ff;
 }
 
 short op_regA(short ir) {
-	return (ir >> 8) & 0b111;
+	return (ir >> 8) & 0x0007;
 }
 
 short op_regB(short ir) {
-	return (ir >> 5) & 0b111;
+	return (ir >> 5) & 0x0007;
 }
 
 short op_data(short ir) {
-    return ir & 0b11111111;
+    return ir & 0x00ff;
 }
 short op_addr(short ir) {
-	return ir & 0b11111111;
+	return ir & 0x00ff;
 }
 
 // 解説
