@@ -73,7 +73,7 @@ int main() {
 
 	do {
 		ir = rom[pc];
-		printf("PC: %d, IR: %d\n, Reg1: %d, Reg2: %d Reg3: %d, Reg4: %d", pc, ir, reg[0], reg[1], reg[2], reg[3]); 
+		printf("PC: %d, IR: %d\n, Reg0: %d, Reg1: %d Reg2: %d, Reg3: %d", pc, ir, reg[0], reg[1], reg[2], reg[3]); 
 
 		pc++;
 		switch(op_code(ir)) {
